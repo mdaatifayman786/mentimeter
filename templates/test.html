@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form methods="POST" action="/sumbit">
+        <input id="msg" name="msg" placeholder="Enter your MSG">
+        <button type="submit" name = 'submit'>Send msg</button>
+    </form>
+    <div class="inbox">
+
+    </div>
+    <script>
+        let body = document.querySelector("body")
+        let msg = 'This the checking'
+        let heading = document.createElement("h1")
+        heading.textContent = msg
+        body.appendChild(heading)
+    </script>
+</body>
+</html>

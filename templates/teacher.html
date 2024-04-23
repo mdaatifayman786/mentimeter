@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/static/teacher.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js" integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA==" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <div class="firstpart">
+            <img src="/static/images/arrow.svg" width="20px" alt="img">
+            <p id="title">Room Code</p>
+            <img id="line" src="/static/images/line.svg" width="20px">
+            <button><svg xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid meet" width="1rem" height="1rem" aria-label="Settings" viewBox="0 0 24 24"><g color="#101834"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></g></g></svg></button>
+        </div>
+        <div class="secondpart">
+            <div class="doubleicon">
+                <div class="profile">
+                    <span>AA</span>
+                </div>
+                <button><svg xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid meet" width="1rem" height="1rem" aria-label="Add" viewBox="0 0 24 24"><g color="#101834"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></g></g></svg></button>
+            </div>
+            <img id="line" src="/static/images/line.svg" width="20px">
+            <button id="eye"><svg xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid meet" width="1rem" height="1rem" aria-label="Visible" viewBox="0 0 24 24"><g color="inherit"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></g></g></svg></button>
+            <button id="share">Share</button>
+            <div class="presentbutton">
+                <button id="pr">Present</button>
+                <button id="ar">></button>
+            </div>
+            <img id="line" src="/static/images/line.svg" width="20px">
+            <button id="anly"><svg xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid meet" width="1rem" height="1rem" aria-label="Results" viewBox="0 0 16 16"><g color="inherit"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.835 11.335L4.835 5.665M7.835 11.335V8.665M10.835 11.335V6.665M5 15H11C13.2091 15 15 13.2091 15 11V5C15 2.79086 13.2091 1 11 1H5C2.79086 1 1 2.79086 1 5V11C1 13.2091 2.79086 15 5 15Z" stroke="currentColor" stroke-width="1.33" stroke-linecap="round"></path></g></g></svg></button>
+        </div>
+    </nav>
+    <div class="mainwindow">
+        <div class="partone">
+            <button id="newslide"><span id="plus">+</span> New Slide</button>
+            <div class="slide">
+            </div>
+        </div>
+        <div class="parttwo">
+            <div class="container">
+                <div class="heading">
+                    <div class="leftpart">
+                        <P>Room-ID</P>
+                        <p id="pendulam">adv13513sd</p>
+                    </div>
+                    <div class="rightpart">
+                        <svg xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid meet" width="200" height="100%" aria-label="Mentimeter Logo" viewBox="0 0 5663.44 679.01"><g fill="#000000"><polygon fill="#FFB9D0" points="67.06 663 532.44 663 201.01 0 67.06 0 67.06 663"></polygon><polygon fill="#196CFF" points="602.86 0 602.86 133.95 468.91 133.95 468.91 267.9 334.96 267.9 334.96 663 736.81 663 736.81 0 602.86 0"></polygon><path fill="#FF80AB" d="M67.06,267.9V663H468.85C465.23,444.16,286.73,267.9,67.06,267.9Z"></path><path fill="#FF403D" d="M67.06,468.82V662.9h200.8C264.25,555.11,175.74,468.82,67.06,468.82Z"></path><rect y="662.97" width="803.87" height="13.41"></rect></g><g fill="#000000"><path d="M1797.7,0V669.45H1692.5V58.34L1536.62,669.45H1332.91L1178,58.34V669.45H1072.79V0h203.7L1436.2,629.28,1595.91,0Z"></path><path d="M2329.46,438l-382.54,55.47c22,55.47,74.6,92.76,137.72,92.76,64.07,0,113.8-34.42,137.71-87l92.77,31.56C2277.82,616.85,2190.79,679,2083.68,679,1943.1,679,1836,570.94,1836,434.18c0-137.71,107.11-244.82,247.69-244.82S2331.37,294.56,2329.46,438Zm-115.72-65c-21-64.07-66-91.81-130.06-91.81-81.29,0-137.71,54.51-147.28,130.06Z"></path><path d="M2794.27,362.46v307H2692.9V386.37c0-74.6-30.61-105.2-95.64-105.2-74.59,0-128.15,47.82-128.15,131V669.45H2367.74V198.92h101.37v67.9c30.61-51.64,87-77.46,151.11-77.46C2720.63,189.36,2794.27,249.61,2794.27,362.46Z"></path><path d="M2992.25,198.92h146.32v82.25H2992.25v247.7c0,41.12,26.79,59.29,63.13,59.29,24.86,0,47.81-5.74,70.77-17.22v89.9c-21,9.56-58.34,17.21-85.12,17.21-101.38,0-150.15-47.81-150.15-149.18V281.17H2823V198.92h67.9V83.2L2992.25,5.74Z"></path><path d="M3171.11,79.38a62.16,62.16,0,1,1,62.16,62.16A62,62,0,0,1,3171.11,79.38Zm13.39,119.54h101.37V669.45H3184.5Z"></path><path d="M4014.6,356.72V669.45H3913.22V369.16c0-62.17-28.68-88-80.33-88s-104.24,41.13-104.24,115.72V669.45H3627.28V369.16c0-62.17-28.7-88-80.34-88S3442.7,322.3,3442.7,397.84V669.45H3341.33V198.92H3442.7V263c27.73-48.78,75.55-73.64,131-73.64,59.3,0,111.9,26.78,134.85,85.11,32.51-52.59,84.16-85.11,151.1-85.11C3946.7,189.36,4014.6,247.7,4014.6,356.72Z"></path><path d="M4546.36,438l-382.54,55.47c22,55.47,74.6,92.76,137.72,92.76,64.07,0,113.8-34.42,137.71-87L4532,530.78C4494.72,616.85,4407.69,679,4300.58,679c-140.58,0-247.69-108.07-247.69-244.83,0-137.71,107.11-244.82,247.69-244.82S4548.28,294.56,4546.36,438Zm-115.72-65c-21-64.07-66-91.81-130.06-91.81-81.29,0-137.71,54.51-147.28,130.06Z"></path><path d="M4716.62,198.92h146.32v82.25H4716.62v247.7c0,41.12,26.78,59.29,63.12,59.29,24.86,0,47.82-5.74,70.77-17.22v89.9c-21,9.56-58.34,17.21-85.12,17.21-101.37,0-150.15-47.81-150.15-149.18V281.17h-67.9V198.92h67.9V83.2L4716.62,5.74Z"></path><path d="M5365,438l-382.54,55.47c22,55.47,74.6,92.76,137.71,92.76,64.08,0,113.81-34.42,137.72-87l92.76,31.56C5313.39,616.85,5226.36,679,5119.25,679c-140.58,0-247.69-108.07-247.69-244.83,0-137.71,107.11-244.82,247.69-244.82S5367,294.56,5365,438Zm-115.72-65c-21-64.07-66-91.81-130.06-91.81-81.29,0-137.72,54.51-147.28,130.06Z"></path><path d="M5663.44,191.28V284a229.09,229.09,0,0,0-35.39-2.87c-74.6,0-123.37,49.73-123.37,135.8V669.45H5403.31V198.92h99.46V269.7c22-48.78,70.77-80.34,132-80.34C5647.17,189.36,5658.65,190.31,5663.44,191.28Z"></path></g></svg>
+                    </div>
+                </div>
+                <div class="question">
+                    <h1 id="et">undefined</h1>
+                </div>
+                <div class="bar">
+                    <div class="bardiv">
+                        <div class="yellow">_________</div>
+                        <div class="green">_________</div>
+                        <div class="blue">_________</div>
+                    </div>
+                    <div class="opdiv">
+                        <h3 id="et1">undefined</h3>
+                        <h3 id="et2">undefined</h3>
+                        <h3 id="et3">undefined</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="contentbar">
+                <div class="cross">
+                   <h3 id="content">Content</h3>
+                   <button id="tp">+</button> 
+                </div>
+                <h3>Slide type</h3>
+                <div class="choice">
+                    <div class="img">
+                        <svg xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid meet" width="28" height="28" aria-label="Bar Chart Icon" viewBox="0 0 48 48"><rect x="32.73" y="17.04" width="11.4" height="25.25" fill="#DBDCE1"></rect><rect x="3.87" y="26.22" width="11.4" height="16.06" fill="rgb(64, 70, 93)"></rect><rect x="18.3" y="4.31" width="11.4" height="37.97" fill="#BCBDC2"></rect><rect y="42.28" width="48" height=".99" fill="#101834"></rect></svg>
+                        <h4>Multiple Choice</h4>
+                    </div>
+                    <h2>></h2>
+                </div>
+                <h3>Question</h3>
+                <input id="mt" placeholder="Multiple Choice" value="Question">
+                <h3>Options</h3>
+                <input id="mt1" value="OPtion1" placeholder="Option 1">
+                <input id="mt2" value="option2" placeholder="Option 2">
+                <input id="mt3" value="option3" placeholder="option 3">
+            </div>
+            <div class="menu">
+                <div class="menu1">
+                    <div id="contentbutton" class="buttondiv">
+                        <svg xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid meet" width="1.25rem" height="1.25rem" aria-label="Edit" viewBox="0 0 24 24" aria-hidden="true"><g color="inherit"><g fill="none"><path d="M12 19.9963H21M15 4.99632L18 7.99632M16.5 3.49632C16.8978 3.0985 17.4374 2.875 18 2.875C18.2786 2.875 18.5544 2.92987 18.8118 3.03648C19.0692 3.14308 19.303 3.29934 19.5 3.49632C19.697 3.6933 19.8532 3.92716 19.9598 4.18453C20.0665 4.4419 20.1213 4.71774 20.1213 4.99632C20.1213 5.2749 20.0665 5.55074 19.9598 5.80811C19.8532 6.06548 19.697 6.29934 19.5 6.49632L7 18.9963L3 19.9963L4 15.9963L16.5 3.49632Z" stroke="currentColor" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"></path></g></g></svg>
+                        <h3>Content</h3>
+                    </div>
+                    <div class="buttondiv">
+                        <svg xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid meet" width="1.25rem" height="1.25rem" aria-label="Design options for slide" viewBox="0 0 24 24" aria-hidden="true"><g color="inherit"><g fill="none"><path d="M6 12V2H18V12M14 2V6M10 2V4M14 19.9V16H17C17.5304 16 18.0391 15.7893 18.4142 15.4142C18.7893 15.0391 19 14.5304 19 14V12H5V14C5 15.1 5.9 16 7 16H10V19.9C10 20.4304 10.2107 20.9391 10.5858 21.3142C10.9609 21.6893 11.4696 21.9 12 21.9C12.5304 21.9 13.0391 21.6893 13.4142 21.3142C13.7893 20.9391 14 20.4304 14 19.9Z" stroke="currentColor" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"></path></g></g></svg>
+                        <h3>Design</h3>
+                    </div>
+                    <div class="buttondiv">
+                        <svg xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid meet" width="1.25rem" height="1.25rem" aria-label="Interactivity" viewBox="0 0 24 24" aria-hidden="true"><g color="inherit"><g fill="none"><path d="M8.00853 22.5C8.00853 22.5 6.14472 21.2865 4.90229 20.073C3.65986 18.8595 5.52349 16.4325 7.38728 17.646C9.25107 18.8595 10.4935 20.073 10.4935 20.073V10.3651C10.4935 8.54491 13.5998 8.54489 13.5998 10.3651V16.4325C13.5998 16.4325 17.6048 16.4356 18.7178 17.775C19.8309 19.1143 19.3641 22.5 19.3641 22.5M15 2.25L13.4148 5.18655M10.1539 5.18655L8.24995 2.25M19.5 8.01055L16.5 8.0094M7.5 8.0094H4.5" stroke="currentColor" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"></path></g></g></svg>
+                        <h3>Interactivity</h3>
+                    </div>
+                </div>
+                <div class="menu2">
+                    <div class="buttondiv">
+                        <svg xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid meet" width="1.25rem" height="1.25rem" aria-label="Templates" viewBox="0 0 24 24" aria-hidden="true"><g color="inherit"><g fill="none"><path d="M3 7.5H21M3 14.25H21M12 21V8M5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3Z" stroke="currentColor" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"></path></g></g></svg>
+                        <h3>path</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/static/teacher.js"></script>
+</body>
+</html>

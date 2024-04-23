@@ -1,0 +1,68 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    background-color: rgb(227, 225, 225);
+}
+.loginwindow{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: .2rem;
+    width: 22rem;
+    margin-top: 1.2rem;
+}
+.uperpart{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+}
+button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5rem;
+    margin-top: 10px;
+    background-color: #fff;
+    border: 2px solid rgb(204, 193, 193);
+    height: 2.5rem;
+    
+}
+button h4{
+    padding-left: 10px;
+}
+#ac{
+    color: gray;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+}
+#box{
+    height: 2rem;
+    border-radius: .3rem;
+    margin-top: .5rem;
+    border: 2px solid rgb(204, 193, 193);
+    margin-bottom: .6rem;
+}
+.loginwindow label{
+    font-weight: 700;
+    font-size: .9rem;
+
+}
+#lst{
+    background-color: rgb(41,98,255);
+}
+
+
+#lst:hover{
+    background-color: gray;
+}
+.loginwindow button:hover{
+    background-color: antiquewhite;
+}

@@ -1,0 +1,440 @@
+@keyframes slide {
+    0% {
+      transform: translatey(200%);
+    }
+    40% {
+      transform: translatey(100%);
+    }
+    60%{
+        transform: translatey(100%);
+    }
+    100% {
+      transform: translatey(-20%);
+    }
+  }
+@font-face {
+    font-family: mint;
+    src: url(font/Roboto-Light.ttf);
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: mint;
+    overflow-x: hidden;
+}
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 2vh;
+    padding-bottom: 1.3vh;
+    border-bottom: .05rem solid rgb(198, 194, 194);
+}
+
+.pages{
+    display: flex;
+    justify-content: space-around;
+    width: 40vw;
+    font-family: mint;
+    font-weight: bolder;
+}
+.link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pin{
+    margin-top: -1vh;
+    margin-left: 1vh;
+}
+.btn button{
+    background-color: #196CFF;
+    width: 5vw;
+    height: 5vh;
+    border: none;
+    border-radius: .5rem;
+    color: #fff;
+    margin-right: 2vw;
+
+}
+.firstpage{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 10vw;
+    padding-right: 10VW;
+    font-family: mint;
+}
+.firstpagesecondpart img{
+    width: 40vw;
+    height: 50vh;
+    padding-left: 10vw;
+    z-index: 1;
+}
+.firstpagefirstpart{
+    width: 26vw;
+}
+.firstpagefirstpart h1{
+    font-size: 5rem;
+    width: 27rem;
+}
+.firstpagesecondpart{
+    display: flex;
+    align-items: center;
+}
+.firstpagefirstpart h3{
+    font-size: 1.5rem;
+    font-weight: 100;
+    margin-top: -2.8rem;
+}
+#timeword{
+    color: rgb(239, 239, 29);
+    position: absolute;
+    top:74px;
+    animation: slide 4s 1s infinite;
+    z-index: -1;
+}
+.firstpagefirstpart button{
+    background-color: #196CFF;
+    width: 10vw;
+    height: 8vh;
+    border: none;
+    border-radius: .5rem;
+    color: #fff;
+    margin-right: 2vw;
+    font-size: large;
+    margin-top: 1rem;
+
+}
+#unlocking-success-with-mentimeter{
+    display: flex;
+    justify-content: center;
+    font-size: 2.5rem;
+}
+.secondpage{
+    margin-top: 18vh;
+    margin-bottom: 2rem;
+}
+.box{
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    margin-top: 5rem;
+}
+.boxinner{
+    display: flex;
+    height: 42vh;
+    width: 70vh;
+    padding-left: 2rem;
+    background-color: #D1D4FF;
+    border-radius: .5rem;
+    position: relative;
+}
+.con{
+    font-family: mint;
+    width: 30vw;
+}
+.con h1{
+    font-size: 2rem;
+    font-weight: 1500;
+}
+.con h3{
+    font-weight: 100;
+    width: 20vw;
+    height: 13vh;
+    overflow: hidden;
+}
+.con button{
+    margin-top: 1.5rem;
+    border: .1rem solid #196cff;
+    font-size: 1.2rem;
+    padding: .5rem;
+    color: #196cff;
+    border-radius: .2rem;
+    background-color: #D1D4FF;
+}
+#a{
+    width: 17rem;
+    position: absolute;
+    top: 2rem;
+    left: 17rem;
+}
+#b{
+    width: 13rem;
+    left: 21rem;
+    top: 7rem;
+    position: absolute;
+}
+#c{
+    width: 13rem;
+    left: 21rem;
+    top: 6.5rem;
+    position: absolute;
+}
+
+.meeting img{
+    width: 8vw;
+    height: 8vh;
+}
+.meeting h1{
+    margin-top: 2rem;
+    font-size: xx-large;
+}
+.meeting h3{
+    color: #196cff;
+}
+.meeting{
+    width: 100vw;
+    height: 55vh;
+    text-align: center;
+    background-color: #EDEDF0;
+    margin-top: 5rem;
+    font-family: mint;
+    padding-top: 1.5rem;
+}
+.icons{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 5rem;
+}
+.about{
+    font-family: mint;
+}
+.about video{
+    width: 42vw;
+    height: 44vh;
+}
+.firsthalf{
+    display: flex;
+    margin-top: 6rem;
+    justify-content: space-evenly;
+}
+.text{
+    width: 33vw;
+}
+.text h1{
+    font-size: 40px;
+    font-weight: 1000;
+}
+.text li{
+    font-size: 20px;
+    margin-left: -1.5rem;
+    margin-bottom: 2rem;
+
+}
+.text1{
+    width: 33vw;
+    margin-top: -3rem;
+}
+.text1 h1{
+    font-size: 40px;
+    font-weight: 1000;
+}
+.text1 li{
+    font-size: 20px;
+    margin-left: -1.5rem;
+    margin-bottom: 2rem;
+
+}
+.stats{
+    width: 100vw;
+    background-color: #FFC738;
+    padding-top: 2rem;
+    margin-top: 4rem;
+    padding-bottom: 2rem;
+    font-family: mint;
+}
+#main{
+    text-align: center;
+    font-size: 40px;
+}
+.num{
+    display: flex;
+    justify-content: space-evenly;
+}
+.numchild{
+    text-align: center;
+}
+.numchild h1{
+    font-size: 60px;
+    border-bottom: 2px solid #000;
+}
+.numchild h2{
+    font-size: 30px;
+}
+.stories  img{
+    width: 48vh;
+
+}
+.stories{
+    display: flex;
+    justify-content: space-evenly;
+    width: 80vw;
+    margin-top: 5rem;
+}
+.abt{
+    width: 40vw;
+    text-align: center;
+}
+.storiescentering{
+    display: flex;
+    justify-content: center;
+}
+.abt h1{
+    line-height: 3rem;
+    font-weight: 900;
+}
+.abt h3{
+    font-weight: 100;
+    color: #196CFF;
+    font-size: 22px;
+}
+.abt button{
+    margin-top: 1.5rem;
+    border: .1rem solid #196cff;
+    font-size: 1.2rem;
+    padding: .5rem;
+    color: #196cff;
+    border-radius: .2rem;
+}
+
+
+.features img{
+    width: 20vh;
+}
+.features h1{
+    font-size: 2.3rem;
+    font-weight: 900;
+
+}
+.features{
+    margin-top: 4rem;
+    text-align: center;
+    background-color: #EDEDF0;
+    padding-top: 2rem;
+    width: 100vw;
+    padding-bottom: 2rem;
+}
+.feature{
+    display: flex;
+    justify-content: space-evenly;
+}
+.featuredcs{
+    width: 15vw;
+    padding-top: 2rem;
+}
+.featuredcs h3{
+    font-weight: 900;
+    font: 800;
+    font-size: x-large;
+}
+.featuredcs p{
+    margin-top: -.6rem;
+    font-weight: 600;
+    font-size: large;
+}
+.featuredcs span{
+    color: #196CFF;
+}
+
+.placeinnner img{
+    width: 20vw;
+
+}
+.place{
+    text-align: center;
+    padding: 3rem;
+}
+.placeinner{
+    display: flex;
+    justify-content: space-evenly;
+    justify-content: center;
+}
+.placeinnner{
+    padding-top: 2rem;
+}
+.placeinnner span{
+    color: #196CFF;
+}
+.banner{
+    width: 100vw;
+    height: 30vh;
+    background-image: url(https://static.mentimeter.com/static/images/menti-pattern.png);
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.banner button{
+    background-color: #fff;
+    width: 10vw;
+    height: 8vh;
+    border: none;
+    border-radius: .5rem;
+    color: #000;
+    margin-right: 2vw;
+    font-size: large;
+    margin-top: 1rem;
+    margin-left: 43vw;
+    font-weight: 700;
+}
+.banner h1{
+    color: #fff;
+    font-weight: 900;
+    font-size: 2.5rem;
+}
+
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 3rem;
+}
+.links{
+    text-align: center;
+}
+#svg1{
+    width: 10vh;
+    height: 5rem;
+}
+#svg2{
+    margin-top: -5rem;
+    height: 40vh;
+}
+.svg{
+    width: 25vh;
+    text-align: center;
+}
+.socialmedia{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #000 ;
+}
+.ft h3{
+    border-bottom: 1px solid #000 ;
+}
+.ft{
+    padding-top: 5vh;
+}
+.ftinner{
+    line-height: 15px;
+}
+
+
+#qqq{
+    margin-bottom: 6rem;
+    background-color: #fff;
+    position: relative;
+}
+#www{
+    background-color: #fff;
+}
+#eee{
+    background-color: #fff;
+    z-index: 1;
+}
+.btn{
+    display: flex;
+}

@@ -1,0 +1,402 @@
+
+#line{
+    transform: rotate(90deg);
+}
+   /* Style for the button */
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    border-bottom: 1px solid gray;
+}
+.firstpart{
+    display: flex;
+    align-items: center;
+    width: 200px;
+    justify-content: space-around;
+}
+.firstpart button{
+    border-radius: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    border: none;
+}
+.secondpart{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 400px;
+}   
+.doubleicon{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.profile{
+    display: flex;
+    position: relative;
+    z-index: -1;
+    background-color: pink;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.doubleicon button{
+    display: flex;
+    position: relative;
+    z-index: 1;
+    left: -9px;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#eye{
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#share{
+    padding: 12px;
+    font-weight: bolder;
+    border-radius: 20px;
+    border: none;
+    width: 80px;
+}
+#ar{
+    transform: rotate(90deg);
+    align-items: center;
+    height: 30px;
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border: none;
+    background-color: #196CFF;
+}
+.presentbutton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#pr{
+    align-items: center;
+    height: 40px;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: 12px;
+    border: none;
+    background-color: #196CFF;
+    margin-right: -3.2px;
+}
+#anly{
+    align-items: center;
+    height: 45px;
+    width: 45px;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    padding: 12px;
+    border: none;
+    margin-right: -3.2px;
+    border-radius: 12px;
+}
+
+/*css of slide part*/
+.partone{
+    display: flex;
+    flex-direction: column;
+    width: 185px;
+    align-items: center;
+}
+.slidebox svg{
+    width: 20px;
+    height: 20px;
+    margin-bottom: -10px;
+}
+.slidebox{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 140px;
+    height: 80px;
+    overflow: hidden; /* Hide the overflow */
+    white-space: nowrap;
+    justify-content: center;
+    margin-left: 17px;
+    border-radius: 6px;
+    border: 2px solid #D3D5D7;
+    position: relative;
+    top: -5.9em;
+    
+}
+.div p{
+    font-size: smaller;
+}
+.slidebox h2{
+    font-weight: 100;
+}
+#newslide{
+    width: 160px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 4px;
+    margin-bottom: 20px;
+    border-radius: 1.2rem;
+    margin-top: 15px;
+    border: none;
+    color: #fff;
+    background-color: #196CFF;
+}
+#plus{
+    font-size: x-large;
+    padding-right: 6px;
+    font-weight: 400;
+}
+.parttwo{
+    background-color: #F4F4F6;
+    width: 100%;
+    margin-left: 15px;
+    padding-bottom: 15px;
+    display: flex;
+
+    
+}
+.mainwindow{
+    display: flex;
+    align-items: flex-start;
+}
+
+.container{
+    width: 48rem;
+    height: 27rem;
+    background-color: #fff;
+    border-radius: 15px;
+    margin-left: 12vw; /*12*/
+    margin-top: 8rem;
+    margin-bottom: 4.85rem;
+}
+.buttondiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+.buttondiv svg{
+    margin-bottom: -15px;
+}
+.menu1{
+    border-radius: 1.2rem;
+    background-color: #fff;
+}
+.menu2{
+    margin-top: 15px;
+    border-radius: 1.2rem;
+    background-color: #fff;
+
+}
+.menu{
+    margin-left: 16vw;/*16*/
+    margin-top: 2rem;
+}
+.contentbar{
+    width: 300px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 1.2rem;
+    background-color: #fff;
+    height: 500px;
+    margin-top: 2rem;
+    border-radius: 15px;
+    margin-left: 15px;
+    display: none;
+}
+.cross{
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid gray;
+    justify-content: space-between;
+}
+.cross button{
+    font-size: 40px;
+    background-color: #fff;
+    border: none;
+    transform: rotate(45deg);
+}
+.choice{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid gray;
+    height: fit-content;
+    border-radius:5px;
+    padding-left: 10px;
+    padding-right: 15px;
+    height: 50px;
+}
+.img{
+    display: flex;
+    align-items: center;
+}
+.choice h2{
+    transform: rotate(90deg);
+    font-weight: bolder;
+    font-size: 25px;
+}
+.contentbar input{
+    height: 35px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+#mt{
+    width: 280px;
+}
+.contentbar input::placeholder{
+    font-size: large;
+    padding-left: 10px;
+}
+.buttondiv:hover{
+    background-color: #D3D5D7;
+    border-radius: 1.2rem;
+}
+.cross button:hover{
+    background-color: #D3D5D7;
+    border-radius: 50%;
+}
+.rightpart svg{
+    width: 100px;
+}
+.leftpart{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 10rem;
+}
+.heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.question h1{
+    width: 46.5rem;
+    word-wrap: break-word;
+    max-height: 6rem;
+    padding-left: 15px;
+    padding-right: 15px;
+    overflow: hidden;
+    margin-top: -1px;
+}
+.bar{
+    width: 46.5rem ;
+    display: flex;
+    justify-content: flex-end;
+    height: 17rem;
+    margin-left: 10px;
+    flex-direction: column;
+    align-items: center;
+}
+.opdiv{
+    display: flex;
+    justify-content: space-evenly;
+    border-top: 2px solid #D3D5D7;
+    width: 35rem;
+    align-items: end;
+    height: 3rem;
+
+}
+.bardiv{
+    display: flex;
+    justify-content: space-evenly;
+    width: 35rem;
+    align-items: end;
+    height: 15rem;
+    overflow: hidden;
+}
+.yellow{
+    height:px;
+    background-color: rgb(75, 75, 64);
+    display: flex;
+    align-items: last baseline;
+}
+.green{
+    height: 150px;
+    background-color:green;
+    display: flex;
+    align-items: last baseline;
+}
+.blue{
+    height: 60px;
+    background-color: blue;
+    display: flex;
+    align-items: last baseline;
+}
+/* extra function*/
+.partone{
+    height: 89vh;
+    overflow: auto;
+}
+.partone::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+}
+#newslide{
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    min-height: 45px;
+    z-index: 1000;
+}
+
+.child{
+    width:100%;
+    height:100%;
+}
+.hi{
+    width: 10rem;
+    height: 4rem;
+    position: relative;
+    display: flex;
+    z-index: 1;
+}
+.trim{
+    margin-bottom: -90px;
+}
+/* CSS */
+.selected {
+    border-radius: 5rem;
+    background-color: #ff0000; /* Change color to your desired color */
+}

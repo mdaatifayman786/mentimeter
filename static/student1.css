@@ -1,0 +1,50 @@
+body{
+    background-image: url(/static/images/home.svg);
+    background-size: cover;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    overflow: hidden;
+    align-items: center;
+
+}
+.card{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid;
+    width: 30rem;
+    height: 16rem;
+    background-color: #fff;
+    border-radius: 25px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border: none;
+    justify-content: space-between;
+
+}
+.card input{
+    height: 3rem;
+    margin-top: 4rem;
+    border-radius: 1.2rem;
+    border: 1px solid gray;
+
+}
+.card input::placeholder{
+    padding-left: 10px;
+    font-size: 20px;
+}
+.card button{
+    margin-bottom: 4rem;
+    width: fit-content;
+    font-size: large;
+    padding: 10px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-radius: 15px;
+    border: 1px solid skyblue;
+}
+.card button:hover{
+    background-color: skyblue;
+}
